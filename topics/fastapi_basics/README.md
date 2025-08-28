@@ -1,15 +1,12 @@
-# FastAPI Basics
+# FastAPI Basics (de-learning-lab)
 
-## Create & activate venv (recommended)
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-## Install
-pip install -r topics/fastapi_basics/requirements.txt
+## Endpoints
+- `GET /` → `{"message":"Hello FastAPI"}`
+- `GET /health` → `{"status":"ok"}`
+- `GET /echo/{name}` → `{"hello": "<name>"}`
+- `POST /query-stock` → body: `{ticker, start_date, end_date}` (Pydantic)
+- `GET /get-stock/{ticker}` → returns `StockResponse {ticker, price, date}`
 
 ## Run
-uvicorn topics.fastapi_basics.main:app --reload
-
-## Docs
-- Swagger: http://127.0.0.1:8000/docs
-- ReDoc:   http://127.0.0.1:8000/redoc
+```bash
+uvicorn fastapi_basics.main:app --reload
