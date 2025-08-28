@@ -1,7 +1,21 @@
-﻿.ipynb_checkpoints/
-*.log
-.env
+# virtual environments
 .venv/
-env/
 venv/
-data/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# jupyter
+.ipynb_checkpoints/
+
+# airflow local dirs (if created)
+airflow_home/
+logs/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
